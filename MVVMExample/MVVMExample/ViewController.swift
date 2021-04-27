@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     private let tableView: UITableView = {
         let table = UITableView()
-        table.register(UITableView.self, forCellReuseIdentifier: "cell")
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
 
