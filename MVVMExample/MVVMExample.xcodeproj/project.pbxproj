@@ -15,6 +15,7 @@
 		3EAF2D9B263792DB003A433D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF2D99263792DB003A433D /* LaunchScreen.storyboard */; };
 		3EAF2DA42637969D003A433D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF2DA32637969D003A433D /* Models.swift */; };
 		3EAF2DAB263796E4003A433D /* PersonFollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF2DAA263796E4003A433D /* PersonFollowingTableViewCell.swift */; };
+		3EAF2DAF2637A7A0003A433D /* PersonFollowingTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF2DAE2637A7A0003A433D /* PersonFollowingTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3EAF2D9C263792DB003A433D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EAF2DA32637969D003A433D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		3EAF2DAA263796E4003A433D /* PersonFollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingTableViewCell.swift; sourceTree = "<group>"; };
+		3EAF2DAE2637A7A0003A433D /* PersonFollowingTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				3EAF2DAA263796E4003A433D /* PersonFollowingTableViewCell.swift */,
+				3EAF2DAE2637A7A0003A433D /* PersonFollowingTableViewCellViewModel.swift */,
 				3EAF2D8E263792D9003A433D /* AppDelegate.swift */,
 				3EAF2D90263792D9003A433D /* SceneDelegate.swift */,
 				3EAF2D92263792D9003A433D /* ViewController.swift */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EAF2D93263792D9003A433D /* ViewController.swift in Sources */,
+				3EAF2DAF2637A7A0003A433D /* PersonFollowingTableViewCellViewModel.swift in Sources */,
 				3EAF2DAB263796E4003A433D /* PersonFollowingTableViewCell.swift in Sources */,
 				3EAF2D8F263792D9003A433D /* AppDelegate.swift in Sources */,
 				3EAF2D91263792D9003A433D /* SceneDelegate.swift in Sources */,
