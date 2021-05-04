@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchAirportsViewController: UIViewController {
 
+    @IBOutlet weak var roundedView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
