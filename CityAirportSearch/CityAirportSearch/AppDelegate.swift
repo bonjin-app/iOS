@@ -7,6 +7,11 @@
 
 import UIKit
 
+/**
+ 1. https://www.youtube.com/watch?v=u0yvRmWas34
+ 2.  https://www.youtube.com/watch?v=TXgXpQNZO60
+ 
+ */
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
