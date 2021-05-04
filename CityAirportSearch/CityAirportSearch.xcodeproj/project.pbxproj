@@ -19,6 +19,7 @@
 		3EA9A79A26412F7000E840A5 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 3EA9A79926412F7000E840A5 /* RxBlocking */; };
 		3EA9A7A12641427B00E840A5 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9A7A02641427B00E840A5 /* SearchCityViewModel.swift */; };
 		3EA9A7A6264145CE00E840A5 /* SearchCityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9A7A5264145CE00E840A5 /* SearchCityCoordinator.swift */; };
+		3EA9A7A9264145FD00E840A5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9A7A8264145FD00E840A5 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3EA9A77B26412D6F00E840A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA9A7A02641427B00E840A5 /* SearchCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewModel.swift; sourceTree = "<group>"; };
 		3EA9A7A5264145CE00E840A5 /* SearchCityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityCoordinator.swift; sourceTree = "<group>"; };
+		3EA9A7A8264145FD00E840A5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA9A7A5264145CE00E840A5 /* SearchCityCoordinator.swift */,
+				3EA9A7A8264145FD00E840A5 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				3EA9A77226412D6D00E840A5 /* SearchCityViewController.swift in Sources */,
 				3EA9A76E26412D6D00E840A5 /* AppDelegate.swift in Sources */,
+				3EA9A7A9264145FD00E840A5 /* Coordinator.swift in Sources */,
 				3EA9A7A6264145CE00E840A5 /* SearchCityCoordinator.swift in Sources */,
 				3EA9A77026412D6D00E840A5 /* SceneDelegate.swift in Sources */,
 				3EA9A7A12641427B00E840A5 /* SearchCityViewModel.swift in Sources */,
