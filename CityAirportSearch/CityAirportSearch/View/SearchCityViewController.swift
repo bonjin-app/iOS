@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchCityViewController.swift
 //  CityAirportSearch
 //
 //  Created by gigas on 2021/05/04.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchAirportsViewController: UIViewController {
+class SearchCityViewController: UIViewController {
 
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
