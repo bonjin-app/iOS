@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+        let urlString = "http://www.africau.edu/images/default/sample.pdf"
         if let url = URL(string: urlString),
            let document = PDFDocument(url: url) {
             loadPdfView(document: document)
