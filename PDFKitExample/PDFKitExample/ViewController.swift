@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var pdfView: PDFView!
     
-    var pageInfoContainer: UIView = {
+    private var pageInfoContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 6
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         return view
     }()
     
-    var currentPageLabel: UILabel = {
+    private var currentPageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         timer?.invalidate()
     }
     
-    func loadMultiplePdfView(inputDocuments: [PDFDocument]) {
+    private func loadMultiplePdfView(inputDocuments: [PDFDocument]) {
         let document: PDFDocument = PDFDocument()
         var pageIndex: Int = .zero
         for input in inputDocuments {
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         pdfView.document = document
     }
     
-    func loadPdfView(document: PDFDocument) {
+    private func loadPdfView(document: PDFDocument) {
         pdfView.autoScales = true
         pdfView.displayMode = .singlePageContinuous
         pdfView.displayDirection = .vertical
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
 // MARK: - PDFView PDFViewPageChanged
 extension ViewController {
     @objc
-    func handlePageChange() {
+    private func handlePageChange() {
         view.bringSubviewToFront(currentPageLabel)
         if let currentPage: PDFPage = pdfView.currentPage,
            let pageIndex: Int = pdfView.document?.index(for: currentPage) {
@@ -92,7 +92,7 @@ extension ViewController {
     }
 
     @objc
-    func whenTimerEnds() {
+    private func whenTimerEnds() {
         UIView.animate(withDuration: 1) {
             self.pageInfoContainer.alpha = 0
         }
@@ -100,7 +100,7 @@ extension ViewController {
 }
 
 extension ViewController {
-    func setUpUI() {
+    private func setUpUI() {
         view.addSubview(pageInfoContainer)
         
         pageInfoContainer.addSubview(currentPageLabel)
@@ -116,7 +116,7 @@ extension ViewController {
         ])
     }
     
-    func initDocument() {
+    private func initDocument() {
         NotificationCenter.default.addObserver(self, selector: #selector(handlePageChange), name: .PDFViewPageChanged, object: nil)
         
         let urlStrings = ["http://www.africau.edu/images/default/sample.pdf",
