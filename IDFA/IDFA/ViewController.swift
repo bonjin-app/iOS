@@ -6,14 +6,31 @@
 //
 
 import UIKit
+import AppTrackingTransparency
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        requestTrackingAuthorization()
     }
-
-
+    
+    func requestTrackingAuthorization() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { (status) in
+                switch status {
+                case .authorized:
+                    print("authorized")
+                case .denied:
+                    print("denied")
+                case .notDetermined:
+                    print("notDetermined")
+                case .restricted:
+                    print("restricted")
+                }
+            }
+        }
+    }
 }
 
