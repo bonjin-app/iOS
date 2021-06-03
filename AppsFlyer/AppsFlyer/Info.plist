@@ -24,7 +24,9 @@
 			<key>CFBundleURLName</key>
 			<string>kr.co.bonjin.AppsFlyer</string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>sampleScheme</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
