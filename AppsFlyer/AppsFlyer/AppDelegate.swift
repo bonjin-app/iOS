@@ -78,9 +78,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-//MARK: AppsFlyerLibDelegate
+// MARK: - AppsFlyerLibDelegate
 extension AppDelegate: AppsFlyerLibDelegate{
-    // Handle Organic/Non-organic installation
+    // 신규 설치에 대한 전환 데이터를 제공
+    // MARK: - Handle Organic/Non-organic installation
     func onConversionDataSuccess(_ installData: [AnyHashable: Any]) {
         print("onConversionDataSuccess data:")
         for (key, value) in installData {
@@ -106,7 +107,9 @@ extension AppDelegate: AppsFlyerLibDelegate{
     func onConversionDataFail(_ error: Error) {
         print(error)
     }
-    //Handle Deep Link
+    
+    // 이미 설치되어 있는 앱이 수동이나 딥링킹을 통해 실행되었을 때, 리타겟팅 전환 데이터를 제공
+    // MARK: - Handle Deep Link
     func onAppOpenAttribution(_ attributionData: [AnyHashable : Any]) {
         //Handle Deep Link Data
         print("onAppOpenAttribution data:")
