@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import AppTrackingTransparency
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { (status) in }
+        }
     }
     
     @IBAction func btnActionAppLink(_ sender: Any) {

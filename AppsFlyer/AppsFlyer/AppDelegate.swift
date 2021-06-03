@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().appleAppID = "F8J465D99R"
         AppsFlyerLib.shared().delegate = self
         AppsFlyerLib.shared().isDebug = true
+        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
+        
         // iOS 10 or later
         if #available(iOS 10, *) {
             UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { _, _ in }
