@@ -16,11 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK: LifeCycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        AppsFlyerLib.shared().appsFlyerDevKey = "o27KAdr4W2Ch6JjpyG5PeL"
-        AppsFlyerLib.shared().appleAppID = "F8J465D99R"
-        AppsFlyerLib.shared().delegate = self
-        AppsFlyerLib.shared().isDebug = true
-        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
+        
+        AppsFlyerProvider.shared.setDelegate(delegate: self)
         
         // iOS 10 or later
         if #available(iOS 10, *) {
@@ -37,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Start the SDK (start the IDFA timeout set above, for iOS 14 or later)
-        AppsFlyerLib.shared().start()
+        AppsFlyerProvider.shared.start()
     }
     
     // Open Univerasal Links
@@ -80,46 +77,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - AppsFlyerLibDelegate
 extension AppDelegate: AppsFlyerLibDelegate{
-    // 신규 설치에 대한 전환 데이터를 제공
+    
     // MARK: - Handle Organic/Non-organic installation
     func onConversionDataSuccess(_ installData: [AnyHashable: Any]) {
-        print("onConversionDataSuccess data:")
-        for (key, value) in installData {
-            print(key, ":", value)
-        }
-        if let status = installData["af_status"] as? String {
-            if (status == "Non-organic") {
-                if let sourceID = installData["media_source"],
-                    let campaign = installData["campaign"] {
-                    print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
-                }
-            } else {
-                print("This is an organic install.")
-            }
-            if let is_first_launch = installData["is_first_launch"] as? Bool,
-                is_first_launch {
-                print("First Launch")
-            } else {
-                print("Not First Launch")
-            }
-        }
+        AppsFlyerProvider.shared.onConversionDataSuccess(installData)
     }
     
     func onConversionDataFail(_ error: Error) {
-        print(error)
+        AppsFlyerProvider.shared.onConversionDataFail(error)
     }
     
-    // 이미 설치되어 있는 앱이 수동이나 딥링킹을 통해 실행되었을 때, 리타겟팅 전환 데이터를 제공
     // MARK: - Handle Deep Link
     func onAppOpenAttribution(_ attributionData: [AnyHashable : Any]) {
-        //Handle Deep Link Data
-        print("onAppOpenAttribution data:")
-        for (key, value) in attributionData {
-            print(key, ":",value)
-        }
+        AppsFlyerProvider.shared.onAppOpenAttribution(attributionData)
     }
     
     func onAppOpenAttributionFailure(_ error: Error) {
-        print(error)
+        AppsFlyerProvider.shared.onAppOpenAttributionFailure(error)
     }
 }
