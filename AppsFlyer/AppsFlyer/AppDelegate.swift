@@ -104,6 +104,7 @@ extension AppDelegate: AppsFlyerLibDelegate{
             }
         }
     }
+    
     func onConversionDataFail(_ error: Error) {
         print(error)
     }
@@ -117,6 +118,7 @@ extension AppDelegate: AppsFlyerLibDelegate{
             print(key, ":",value)
         }
     }
+    
     func onAppOpenAttributionFailure(_ error: Error) {
         print(error)
     }
