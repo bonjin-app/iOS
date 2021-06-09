@@ -16,18 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-3h-zQx">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-3h-zQx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="4"/>
                             </progressView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lTd-TG-6gl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrW-TZ-Nn3">
+                                <rect key="frame" x="0.0" y="48" width="414" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lTd-TG-6gl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="EqD-yE-7L1"/>
+                                    <constraint firstAttribute="height" constant="300" id="cpm-VI-Az8"/>
+                                    <constraint firstItem="lTd-TG-6gl" firstAttribute="leading" secondItem="JrW-TZ-Nn3" secondAttribute="leading" id="eRV-JF-Pgj"/>
+                                    <constraint firstAttribute="trailing" secondItem="lTd-TG-6gl" secondAttribute="trailing" id="eU8-oQ-QNA"/>
+                                    <constraint firstItem="lTd-TG-6gl" firstAttribute="top" secondItem="JrW-TZ-Nn3" secondAttribute="top" id="jRD-L9-gyG"/>
+                                    <constraint firstAttribute="bottom" secondItem="lTd-TG-6gl" secondAttribute="bottom" id="oHQ-Xh-nr4"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaJ-Fa-9E9">
-                                <rect key="frame" x="20" y="364" width="374" height="50"/>
+                                <rect key="frame" x="20" y="368" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9iA-WJ-pZI"/>
@@ -36,26 +46,43 @@
                                 <state key="normal" title="Upload">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressUploadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHE-oT-bjU"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-fF-jgo">
+                                <rect key="frame" x="194" y="438" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WaJ-Fa-9E9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="59m-YY-dKJ"/>
-                            <constraint firstItem="lTd-TG-6gl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ERD-5i-e4o"/>
-                            <constraint firstItem="WaJ-Fa-9E9" firstAttribute="top" secondItem="lTd-TG-6gl" secondAttribute="bottom" constant="20" id="K2f-At-LMR"/>
-                            <constraint firstItem="lTd-TG-6gl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Llg-5A-qNY"/>
+                            <constraint firstItem="l7d-fF-jgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ENP-UG-fi8"/>
+                            <constraint firstItem="WaJ-Fa-9E9" firstAttribute="top" secondItem="JrW-TZ-Nn3" secondAttribute="bottom" constant="20" id="GQa-CQ-SEb"/>
+                            <constraint firstItem="l7d-fF-jgo" firstAttribute="top" secondItem="WaJ-Fa-9E9" secondAttribute="bottom" constant="20" id="MW1-Sw-82d"/>
                             <constraint firstItem="zTR-3h-zQx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PkB-w6-Da3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WaJ-Fa-9E9" secondAttribute="trailing" constant="20" id="RTV-60-9pE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lTd-TG-6gl" secondAttribute="trailing" id="Rzz-tz-BOC"/>
                             <constraint firstItem="zTR-3h-zQx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="amX-qk-KMf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrW-TZ-Nn3" secondAttribute="trailing" id="k9o-3r-h16"/>
+                            <constraint firstItem="JrW-TZ-Nn3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kOA-oM-SEi"/>
+                            <constraint firstItem="JrW-TZ-Nn3" firstAttribute="top" secondItem="zTR-3h-zQx" secondAttribute="bottom" id="oy8-g7-KPC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zTR-3h-zQx" secondAttribute="trailing" id="szq-Zk-rua"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="lTd-TG-6gl" id="JVP-NM-ad2"/>
+                        <outlet property="progressLabel" destination="l7d-fF-jgo" id="wbd-Py-88L"/>
+                        <outlet property="progressView" destination="zTR-3h-zQx" id="eqL-0V-MhQ"/>
+                        <outlet property="uploadButton" destination="WaJ-Fa-9E9" id="lGI-DM-IlY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="117"/>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
