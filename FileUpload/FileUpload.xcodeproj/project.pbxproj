@@ -69,7 +69,7 @@
 				3EC9E134267099CC0096FB16 /* Providers */,
 				3EC9E13726709BF70096FB16 /* Extensions */,
 				3EC9E13A26709DE10096FB16 /* Utils */,
-				3EC9E13126708B990096FB16 /* test.mp4 */,
+				3EC9E13D2670A4A50096FB16 /* Resources */,
 				3EC9E11526705D320096FB16 /* AppDelegate.swift */,
 				3EC9E11726705D320096FB16 /* SceneDelegate.swift */,
 				3EC9E11926705D320096FB16 /* ViewController.swift */,
@@ -103,6 +103,14 @@
 				3EC9E13B26709DED0096FB16 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3EC9E13D2670A4A50096FB16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EC9E13126708B990096FB16 /* test.mp4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
