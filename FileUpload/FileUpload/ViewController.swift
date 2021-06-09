@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 extension ViewController {
     func setUpUI() {
         let filePath = Bundle.main.url(forResource: "test", withExtension: "mp4")
-        let mimeType = filePath?.getMimeType()
+        let mimeType = filePath?.mimeType
         let fileName = "100.mp4"
         let parameters: Parameters = [
             "email": "1",
@@ -69,7 +69,7 @@ extension ViewController {
         }.response { response in
             if let data = response.data {
                 print("Response Data: \(data)")
-                print("response : \(String(data: data, encoding: .utf8))")
+                print("response : \(String(describing: String(data: data, encoding: .utf8)))")
                 
             } else {
                 print("Something went wrong")
