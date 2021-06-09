@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Alamofire
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -30,7 +28,7 @@ extension ViewController {
         let filePath = Bundle.main.url(forResource: "test", withExtension: "mp4")
         let mimeType = filePath?.mimeType
         let fileName = "100.mp4"
-        let parameters: Parameters = [
+        let parameters: [String:String] = [
             "email": "1",
             "contentMId": "000001"
         ]
