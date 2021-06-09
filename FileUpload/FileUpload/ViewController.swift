@@ -78,19 +78,3 @@ extension ViewController {
     }
 }
 
-import MobileCoreServices
-
-extension URL {
-    func getMimeType() -> String {
-        let pathExtension = self.pathExtension
-        if let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension,
-                                                           pathExtension as NSString,
-                                                           nil)?.takeRetainedValue() {
-            if let type = UTTypeCopyPreferredTagWithClass(uti,
-                                                          kUTTagClassMIMEType)?.takeRetainedValue() {
-                return type as String
-            }
-        }
-        return "application/octet-stream"
-    }
-}
