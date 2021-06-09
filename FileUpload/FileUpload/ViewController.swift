@@ -41,10 +41,8 @@ extension ViewController {
                               fileData: fileData ?? Data(),
                               fileName: fileName,
                               mimeType: mimeType ?? "",
-                              progressHandler: { progress in
-                                self.progressView.setProgress(Float(progress.fractionCompleted), animated: true)
-                                self.progressLabel.text = "\(progress.fractionCompleted*100)"
-                              }, successHandler: { response in
+                              progressHandler: uploadProgress,
+                              successHandler: { response in
                                 if let data = response.data {
                                     print("Response Data: \(data)")
                                     print("response : \(String(describing: String(data: data, encoding: .utf8)))")
@@ -54,6 +52,11 @@ extension ViewController {
                                 }
                               })
         }
+    }
+    
+    func uploadProgress(progress: Progress) {
+        self.progressView.setProgress(Float(progress.fractionCompleted), animated: true)
+        self.progressLabel.text = "\(progress.fractionCompleted*100)"
     }
 }
 
