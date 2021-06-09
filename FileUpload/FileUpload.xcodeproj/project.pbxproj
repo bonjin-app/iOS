@@ -17,6 +17,7 @@
 		3EC9E13226708B990096FB16 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9E13126708B990096FB16 /* test.mp4 */; };
 		3EC9E136267099E30096FB16 /* FileUploadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9E135267099E30096FB16 /* FileUploadProvider.swift */; };
 		3EC9E13926709C0A0096FB16 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9E13826709C0A0096FB16 /* URL+Extension.swift */; };
+		3EC9E13C26709DED0096FB16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9E13B26709DED0096FB16 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3EC9E13126708B990096FB16 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		3EC9E135267099E30096FB16 /* FileUploadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadProvider.swift; sourceTree = "<group>"; };
 		3EC9E13826709C0A0096FB16 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		3EC9E13B26709DED0096FB16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				3EC9E134267099CC0096FB16 /* Providers */,
 				3EC9E13726709BF70096FB16 /* Extensions */,
+				3EC9E13A26709DE10096FB16 /* Utils */,
 				3EC9E13126708B990096FB16 /* test.mp4 */,
 				3EC9E11526705D320096FB16 /* AppDelegate.swift */,
 				3EC9E11726705D320096FB16 /* SceneDelegate.swift */,
@@ -92,6 +95,14 @@
 				3EC9E13826709C0A0096FB16 /* URL+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3EC9E13A26709DE10096FB16 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3EC9E13B26709DED0096FB16 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				3EC9E11826705D320096FB16 /* SceneDelegate.swift in Sources */,
 				3EC9E13926709C0A0096FB16 /* URL+Extension.swift in Sources */,
 				3EC9E136267099E30096FB16 /* FileUploadProvider.swift in Sources */,
+				3EC9E13C26709DED0096FB16 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

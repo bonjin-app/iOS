@@ -13,5 +13,4 @@ class FileUploadProvider {
     
     static let shared = { FileUploadProvider() }()
     
-    
 }

@@ -21,12 +21,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pressUploadButton(_ sender: Any) {
-        setUpUI()
+        performFileUpload()
     }
 }
 
 extension ViewController {
-    func setUpUI() {
+    func performFileUpload() {
         let filePath = Bundle.main.url(forResource: "test", withExtension: "mp4")
         let mimeType = filePath?.mimeType
         let fileName = "100.mp4"
@@ -42,11 +42,10 @@ extension ViewController {
                            fileName: fileName,
                            mimeType: mimeType ?? "")
         }
-        
     }
     
     func fileSubmission(parameters: Parameters, fileData: Data, fileName: String, mimeType: String) {
-        guard let url = URL(string: "http://192.168.1.21:9091/api/upload") else {
+        guard let url = URL(string: "/api/upload", relativeTo: Constants.Base.domain.url) else {
             return
         }
         
