@@ -21,7 +21,7 @@ class FileUploadProvider {
         print("FileUploadProvider init")
     }
     
-    func requestFileUpload(parameters: Parameters, fileData: Data, fileName: String, mimeType: String,
+    func requestFileUploadAlamofire(parameters: Parameters, fileData: Data, fileName: String, mimeType: String,
                            progressHandler: ((Progress) -> Void)?,
                            successHandler: @escaping (AFDataResponse<Data?>) -> Void) {
         guard let url = URL(string: FileUploadProvider.API_UPLOAD, relativeTo: Constants.Base.domain.url) else {

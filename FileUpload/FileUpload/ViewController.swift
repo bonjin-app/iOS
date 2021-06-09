@@ -36,7 +36,7 @@ extension ViewController {
         
         do {
             let fileData = try? Data(contentsOf: filePath!)
-            FileUploadProvider.shared.requestFileUpload(parameters: parameters,
+            FileUploadProvider.shared.requestFileUploadAlamofire(parameters: parameters,
                               fileData: fileData ?? Data(),
                               fileName: fileName,
                               mimeType: mimeType ?? "",
