@@ -10,6 +10,7 @@ import Foundation
 struct Constants {
     struct Base {
         static let domain = "http://192.168.1.21:9091"
+//        static let domain = "http://210.205.202.28:8080"
     }
 }
 

@@ -37,19 +37,19 @@ extension ViewController {
         
         do {
             let fileData = try? Data(contentsOf: filePath!)
-            fileSubmission(parameters: parameters,
+            requestFileUpload(parameters: parameters,
                            fileData: fileData ?? Data(),
                            fileName: fileName,
                            mimeType: mimeType ?? "")
         }
     }
     
-    func fileSubmission(parameters: Parameters, fileData: Data, fileName: String, mimeType: String) {
+    func requestFileUpload(parameters: Parameters, fileData: Data, fileName: String, mimeType: String) {
         guard let url = URL(string: "/api/upload", relativeTo: Constants.Base.domain.url) else {
             return
         }
         
-//        guard let url = URL(string: "http://210.205.202.28:8080/transfer") else {
+//        guard let url = URL(string: "/transfer", relativeTo: Constants.Base.domain.url) else {
 //            return
 //        }
         
