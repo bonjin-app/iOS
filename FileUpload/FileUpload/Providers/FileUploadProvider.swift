@@ -14,7 +14,6 @@ class FileUploadProvider {
     static let shared = { FileUploadProvider() }()
     
     static let API_UPLOAD = "/api/upload"
-//    static let API_UPLOAD = "/transfer"
     
     static let FILE_UPLOAD_KEY = "files"
     

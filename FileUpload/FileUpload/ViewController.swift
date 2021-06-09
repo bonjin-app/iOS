@@ -25,12 +25,13 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func performFileUpload() {
-        let filePath = Bundle.main.url(forResource: "test", withExtension: "mp4")
+        let filePath = Bundle.main.url(forResource: "Sample", withExtension: "mp4")
         let mimeType = filePath?.mimeType
-        let fileName = "100.mp4"
+        let fileName = "Sample.mp4"
         let parameters: [String:String] = [
-            "email": "1",
-            "contentMId": "000001"
+            "email": "bonjin.app@gmail.com",
+            "team": "bonjin",
+            "name": "gigas",
         ]
         
         do {
@@ -42,7 +43,6 @@ extension ViewController {
                               progressHandler: uploadProgress,
                               successHandler: { response in
                                 if let data = response.data {
-                                    print("Response Data: \(data)")
                                     print("response : \(String(describing: String(data: data, encoding: .utf8)))")
                                     
                                 } else {

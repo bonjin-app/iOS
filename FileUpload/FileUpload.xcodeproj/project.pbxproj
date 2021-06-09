@@ -14,7 +14,7 @@
 		3EC9E11F26705D340096FB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9E11E26705D340096FB16 /* Assets.xcassets */; };
 		3EC9E12226705D340096FB16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9E12026705D340096FB16 /* LaunchScreen.storyboard */; };
 		3EC9E130267066190096FB16 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC9E12F267066190096FB16 /* Alamofire */; };
-		3EC9E13226708B990096FB16 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9E13126708B990096FB16 /* test.mp4 */; };
+		3EC9E13226708B990096FB16 /* Sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9E13126708B990096FB16 /* Sample.mp4 */; };
 		3EC9E136267099E30096FB16 /* FileUploadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9E135267099E30096FB16 /* FileUploadProvider.swift */; };
 		3EC9E13926709C0A0096FB16 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9E13826709C0A0096FB16 /* URL+Extension.swift */; };
 		3EC9E13C26709DED0096FB16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9E13B26709DED0096FB16 /* Constants.swift */; };
@@ -29,7 +29,7 @@
 		3EC9E11E26705D340096FB16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EC9E12126705D340096FB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EC9E12326705D340096FB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EC9E13126708B990096FB16 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		3EC9E13126708B990096FB16 /* Sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sample.mp4; sourceTree = "<group>"; };
 		3EC9E135267099E30096FB16 /* FileUploadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadProvider.swift; sourceTree = "<group>"; };
 		3EC9E13826709C0A0096FB16 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		3EC9E13B26709DED0096FB16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		3EC9E13D2670A4A50096FB16 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3EC9E13126708B990096FB16 /* test.mp4 */,
+				3EC9E13126708B990096FB16 /* Sample.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 				3EC9E12226705D340096FB16 /* LaunchScreen.storyboard in Resources */,
 				3EC9E11F26705D340096FB16 /* Assets.xcassets in Resources */,
 				3EC9E11D26705D320096FB16 /* Main.storyboard in Resources */,
-				3EC9E13226708B990096FB16 /* test.mp4 in Resources */,
+				3EC9E13226708B990096FB16 /* Sample.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
