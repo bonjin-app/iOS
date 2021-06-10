@@ -25,6 +25,11 @@ extension ViewController {
     func performFileUpload() {
         
         do {
+            
+            // ImagePicker
+//            let videoURL = info[UIImagePickerController.InfoKey.mediaURL] as! URL
+//            let fileData = try? Data(contentsOf: videoURL, options: .mappedIfSafe)
+            
             // 로컬 파일
 //            let fileUrl = Bundle.main.url(forResource: "Sample", withExtension: "mp4")
             
