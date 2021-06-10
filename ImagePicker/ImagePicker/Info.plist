@@ -24,6 +24,8 @@
 	<string>Camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photo Library</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
