@@ -21,55 +21,29 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCn-pk-vsh">
-                                <rect key="frame" x="20" y="742" width="177" height="40"/>
+                                <rect key="frame" x="20" y="742" width="374" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lWH-ax-vHW"/>
                                 </constraints>
-                                <state key="normal" title="사진 촬영">
+                                <state key="normal" title="Camera">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="pressCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9aX-8y-Pba"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FX-l6-ibR">
-                                <rect key="frame" x="217" y="742" width="177" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3lg-b7-e3h"/>
-                                </constraints>
-                                <state key="normal" title="비디오 촬영">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressVideoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZP-6L-iZg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWh-1V-N9n">
-                                <rect key="frame" x="20" y="802" width="177" height="40"/>
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bQc-XN-e91"/>
                                 </constraints>
-                                <state key="normal" title="사진 불러오기">
+                                <state key="normal" title="Photo Library">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressImageLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CzJ-6B-KKZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-gw-fl2">
-                                <rect key="frame" x="217" y="802" width="177" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="b6X-57-kjW"/>
-                                </constraints>
-                                <state key="normal" title="비디오 불러오기">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressVideoLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mT-am-jp9"/>
+                                    <action selector="pressPhotoLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CzJ-6B-KKZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,19 +51,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oCn-pk-vsh" firstAttribute="top" secondItem="hGV-Cj-wlL" secondAttribute="bottom" constant="20" id="89q-Wj-1Sy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Caa-gw-fl2" secondAttribute="bottom" constant="20" id="GzI-Gw-4iJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FX-l6-ibR" secondAttribute="trailing" constant="20" id="Q4V-uJ-fQj"/>
-                            <constraint firstItem="Caa-gw-fl2" firstAttribute="leading" secondItem="IWh-1V-N9n" secondAttribute="trailing" constant="20" id="cGm-b7-EnC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWh-1V-N9n" secondAttribute="trailing" constant="20" id="S49-AW-6jB"/>
                             <constraint firstItem="IWh-1V-N9n" firstAttribute="top" secondItem="oCn-pk-vsh" secondAttribute="bottom" constant="20" id="cK6-ZJ-PPR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Caa-gw-fl2" secondAttribute="trailing" constant="20" id="d5o-xP-dMY"/>
-                            <constraint firstItem="Caa-gw-fl2" firstAttribute="top" secondItem="7FX-l6-ibR" secondAttribute="bottom" constant="20" id="itQ-TO-he0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCn-pk-vsh" secondAttribute="trailing" constant="20" id="ioj-16-G4h"/>
                             <constraint firstItem="IWh-1V-N9n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jK3-sw-lqE"/>
-                            <constraint firstItem="7FX-l6-ibR" firstAttribute="width" secondItem="oCn-pk-vsh" secondAttribute="width" id="l4d-9g-Wgw"/>
                             <constraint firstItem="hGV-Cj-wlL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lC4-PB-Zyg"/>
-                            <constraint firstItem="7FX-l6-ibR" firstAttribute="leading" secondItem="oCn-pk-vsh" secondAttribute="trailing" constant="20" id="lQ5-n5-Oja"/>
-                            <constraint firstItem="7FX-l6-ibR" firstAttribute="top" secondItem="hGV-Cj-wlL" secondAttribute="bottom" constant="20" id="m6x-ji-yo3"/>
                             <constraint firstItem="hGV-Cj-wlL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n8z-F6-Ziv"/>
-                            <constraint firstItem="Caa-gw-fl2" firstAttribute="width" secondItem="oCn-pk-vsh" secondAttribute="width" id="o0W-Ja-sTe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWh-1V-N9n" secondAttribute="bottom" constant="20" id="og5-9t-Jfu"/>
                             <constraint firstItem="oCn-pk-vsh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p47-m7-bQR"/>
                             <constraint firstItem="IWh-1V-N9n" firstAttribute="width" secondItem="oCn-pk-vsh" secondAttribute="width" id="tsK-Zw-ALZ"/>
@@ -102,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="89"/>
+            <point key="canvasLocation" x="-65" y="56"/>
         </scene>
     </scenes>
     <resources>
