@@ -20,13 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imagePicker.delegate = self
     }
 
     @IBAction func pressCameraButton(_ sender: Any) {
         print("pressCameraButton")
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            imagePicker.delegate = self
             imagePicker.sourceType = .camera
             imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
@@ -39,6 +39,17 @@ class ViewController: UIViewController {
     
     @IBAction func pressImageLoadButton(_ sender: Any) {
         print("pressImageLoadButton")
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.mediaTypes = [kUTTypeImage as String]
+            imagePicker.allowsEditing = true
+            present(imagePicker, animated: true, completion: nil)
+            
+        } else {
+            showAlert("Photo album inaccessable", message: "Application cannot access the photo album.")
+        }
     }
     
     @IBAction func pressVideoButton(_ sender: Any) {
