@@ -13,13 +13,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    let imagePicker = UIImagePickerController()
+    var imagePicker: UIImagePickerController!
     var flagImageSave: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        imagePicker.delegate = self
+        setUpUI()
     }
 
     @IBAction func pressCameraButton(_ sender: Any) {
@@ -35,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pressPhotoLibraryButton(_ sender: Any) {
-        print("pressImageLoadButton")
+        print("pressPhotoLibraryButton")
         flagImageSave = false
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -49,8 +48,11 @@ class ViewController: UIViewController {
 
 /**
  + Privacy - Camera Usage Description
+    - 카메라 권한
  + Privacy - Photo Library Usage Description
+    - 사진 라이브러리 권한
  + Privacy - Microphone Usage Description
+    - 마이크 권한
  
  imagePicker.mediaTypes = [kUTTypeImage as String]
  imagePicker.mediaTypes = [kUTTypeMovie as String]
@@ -89,9 +91,15 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
 }
 
 extension ViewController {
+    func setUpUI() {
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+    }
+    
     func presentPhotoPicker(sourceType: UIImagePickerController.SourceType) {
         imagePicker.sourceType = sourceType
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera) ?? []
+        imagePicker.modalPresentationStyle = .fullScreen
         present(imagePicker, animated: true, completion: nil)
     }
     
