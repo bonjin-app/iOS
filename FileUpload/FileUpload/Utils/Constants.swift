@@ -9,7 +9,8 @@ import Foundation
 
 struct Constants {
     struct Base {
-        static let domain = "http://192.168.1.21:9091"
+        // 서버 URL
+        static let domain = "http://192.168.0.22:9091"
     }
 }
 
